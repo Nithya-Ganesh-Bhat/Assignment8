@@ -23,14 +23,14 @@ def test_function_name_had_cap_letter():
     for function in functions:
         assert len(re.findall('([A-Z])', function[0])) == 0, "You have used Capital letter(s) in your function names"
 
-def test_Doc_string_length():
-    fn = session8.loc_length()
+def test_doc_string_outer():
+    fn = session8.doc_string_outer()
     assert fn(sum) == 'Function sum docstring length is more then 50 characters'
     assert fn(abs) == 'Function abs docstring length is less then 50 characters'
 
 
 def test_fibonacci_number():
-    fn = session8.fibonacci_number()
+    fn = session8.fibo_outer()
     assert fn() == 'First number in fibonacci series is 0'
     assert fn() == 'Second number in fibonacci series is 1'
     assert fn() == 'Next number in fibonacci series is 1'
