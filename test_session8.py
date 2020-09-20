@@ -34,6 +34,8 @@ def some_function():
 def test_doc_string_outer():
     fn = session8.doc_string_outer()
     assert fn(some_function) == True
+    assert fn(sum) == True
+    assert fn(abs) == True
 
 
 def test_fibonacci_number():
