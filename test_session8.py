@@ -62,7 +62,11 @@ def test_counter():
     counter_mul(20,2)
     counter_mul(40,3)
     counter_mul(100,6)
-    assert session8.counters == {'add' : 3 , 'mul' : 3 , 'div' : 0 }
+    counter_div(10,2)
+    assert session8.counters == {'add' : 3 , 'mul' : 3 , 'div' : 1 }
+    counter_mul(100,6)
+    counter_div(10,2)
+    assert session8.counters == {'add' : 3 , 'mul' : 4 , 'div' : 2 }
     
 times_dict1 = {'add' : 0 , 'mul' : 0 , 'div' : 0 }
 times_dict2 = {'add' : 0 , 'mul' : 0 , 'div' : 0 }
