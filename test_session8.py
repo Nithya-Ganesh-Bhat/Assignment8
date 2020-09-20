@@ -59,16 +59,16 @@ def test_counter():
     counter_add(1, 2)
     counter_add(3, 4)
     counter_add(6, 5)
-    assert session8.func_dict == {'add' : 3 , 'mul' : 0 , 'div' : 0 }
+    assert session8.counters == {'add' : 3 , 'mul' : 0 , 'div' : 0 }
     counter_mul(20,2)
     counter_mul(40,3)
     counter_mul(100,6)
-    assert session8.func_dict == {'add' : 3 , 'mul' : 3 , 'div' : 0 }
+    assert session8.counters == {'add' : 3 , 'mul' : 3 , 'div' : 0 }
     counter_mul(13,2)
     counter_mul(2,5)
-    assert session8.func_dict == {'add' : 3 , 'mul' : 5 , 'div' : 0 }
+    assert session8.counters == {'add' : 3 , 'mul' : 5 , 'div' : 0 }
     counter_div(100,18)
-    assert session8.func_dict == {'add' : 3 , 'mul' : 5 , 'div' : 1 }
+    assert session8.counters == {'add' : 3 , 'mul' : 5 , 'div' : 1 }
     
     
 times_dict1 = {'add' : 0 , 'mul' : 0 , 'div' : 0 }
