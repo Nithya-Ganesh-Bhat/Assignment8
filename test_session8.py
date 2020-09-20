@@ -34,21 +34,13 @@ def some_function():
 def test_doc_string_outer():
     fn = session8.doc_string_outer()
     assert fn(some_function) == True
-    assert fn(sum) == True
-    assert fn(abs) == True
-
 
 def test_fibonacci_number():
-    fn = session8.fibo_outer()
-    assert fn() == 'First number in fibonacci series is 0'
-    assert fn() == 'Second number in fibonacci series is 1'
-    assert fn() == 'Next number in fibonacci series is 1'
-    assert fn() == 'Next number in fibonacci series is 2'
-    assert fn() == 'Next number in fibonacci series is 3'
-    assert fn() == 'Next number in fibonacci series is 5'
-    assert fn() == 'Next number in fibonacci series is 8'
-    assert fn() == 'Next number in fibonacci series is 13'
-    assert fn() == 'Next number in fibonacci series is 21'
+    fn = session8.fibo_outer(3)
+    assert fn() == 5
+    assert fn() == 8
+    assert fn() == 13
+    assert fn() == 21
     
 def add(a, b):
     return a + b
